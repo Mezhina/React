@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-class App extends React.Component {
- render(){
-  const [todos, setTodos] = this.useState([]);
-  const [newTodo, setNewTodo] =this.useState('');
-  const [filter, setFilter] = this.useState('all');
+function App() {
+  const [todos, setTodos] = useState([]);
+  const [newTodo, setNewTodo] =useState('');
+  const [filter, setFilter] = useState('all');
 
   // Загрузка списка из local storage
-  this.useEffect(() => {
+  useEffect(() => {
     const storedTodos = localStorage.getItem('todos');
     if (storedTodos) {
       setTodos(JSON.parse(storedTodos));
@@ -16,7 +15,7 @@ class App extends React.Component {
   }, []);
 
   //сохранение в JSON
-  this.useEffect(() => {
+  useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
 
@@ -61,7 +60,7 @@ class App extends React.Component {
       <div className="input-container">
         <input
           type="text"
-          value={this.newTodo}
+          value={newTodo}
           onChange={(e) => setNewTodo(e.target.value)}
           placeholder="Добавьте новую задачу..."
         />
@@ -70,10 +69,10 @@ class App extends React.Component {
 
       <ul>
         {filteredTodos().map((todo) => (
-          <li key={this.todo.id} className={`todo-item ${this.todo.completed ? 'completed' : ''}`}>
+          <li key={todo.id} className={`todo-item ${todo.completed ? 'completed' : ''}`}>
             <input
               type="checkbox"
-              checked={this.todo.completed}
+              checked={todo.completed}
               onChange={() => toggleComplete(todo.id)}
             />
             <span className="todo-text">{todo.text}</span>
@@ -99,7 +98,7 @@ class App extends React.Component {
       </div>
     </div>
   )
-}
+
 }
 
 export default App;
