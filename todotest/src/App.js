@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { VscAdd } from 'react-icons/vsc';
+import { VscCheck } from 'react-icons/vsc';
+import { VscEyeClosed } from 'react-icons/vsc';
+import { VscTrash } from 'react-icons/vsc';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -64,7 +68,9 @@ function App() {
           onChange={(e) => setNewTodo(e.target.value)}
           placeholder="Добавьте новую задачу..."
         />
-        <button onClick={addTodo}></button>
+        <button onClick={addTodo}>
+            <VscAdd />
+        </button>
       </div>
 
       <ul>
@@ -76,7 +82,9 @@ function App() {
               onChange={() => toggleComplete(todo.id)}
             />
             <span className="todo-text">{todo.text}</span>
-            <button onClick={() => deleteTodo(todo.id)} className="delete-button"></button>
+            <button onClick={() => deleteTodo(todo.id)} className="delete-button">
+                 <VscTrash />
+            </button>
           </li>
         ))}
       </ul>
@@ -93,7 +101,9 @@ function App() {
         </div>
 
         {todos.some((todo) => todo.completed) && (
-          <button onClick={clearCompleted} className="clear-button"> </button>
+          <button onClick={clearCompleted} className="clear-button">
+            <VscEyeClosed />
+          </button>
         )}
       </div>
     </div>

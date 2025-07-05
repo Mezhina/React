@@ -10,15 +10,7 @@
     --button-hover-color: #ffc290;
     --button-add-hover-color: #267729;
     --font-size: 1.25em;
-    --hover-color: #d38d5b;
-
-   /* img */
-   --img-trash: url('./img/trash.png');
-   --img-trash-light: url('./img/trash-light.png');
-   --img-housekeeping: url('./img/housekeeping.png');
-   --img-housekeeping-light: url('./img/housekeeping-light.png');
-   --img-plus: url('./img/plus.png');
-   --img-plus-light: url('./img/plus-light.png');
+    --hover-color: #d38d5b
 }
 
 .app {
@@ -78,9 +70,7 @@
         cursor: pointer;
     }
     .input-container button:hover {
-        background: var(--img-plus-light);
-        background-size: 50px 50px;
-        background-color: var(--button-add-hover-color);
+        background: var(--button-add-hover-color);
     }
 
     ul {
@@ -94,7 +84,10 @@
       padding: 10px;
       border-bottom: 1px solid #eee;
     }
-
+    svg {
+        height: 40px;
+        width: 40px;
+    }
     .todo-item.completed .todo-text {
       text-decoration: line-through;
       color: #999;
@@ -106,20 +99,16 @@
       font-size: var(--font-size);
     }
 
-    .delete-button:hover,
-    .delete-button:active {
-        content: '';
-        background: var(--img-trash);
-        background-size: 40px 40px;
+    .delete-button svg:hover,
+    .delete-button svg:active {
+        color: var(--button-delete-color);
     }
 
     .delete-button {
         content: '';
         min-width: 40px;
         height: 40px;
-        background: var(--img-trash-light);
-        background-color: var(--button-color);
-        background-size: 40px 40px;
+        background: var(--button-color);
         color: white;
         border: none;
         padding: 5px 10px;
@@ -166,7 +155,7 @@
 
 
     .clear-button:hover {
-      background-color: var(--button-delete-hover-color);
+      background: var(--button-delete-hover-color);
     }
 
 
@@ -174,11 +163,7 @@
       content: '';
       min-width: 140px;
       height: 140px;
-      background: var( --img-housekeeping);
-      background-size: 130px 130px;
-      background-color: var(--button-delete-color);
-      background-repeat: no-repeat;
-      background-position: center;
+      background: var(--button-delete-color);
       color: #333;
       border: none;
       padding: 5px 10px;
@@ -187,10 +172,10 @@
       margin: 0 0 0 18px;
       }
 
-   .clear-button img{
-        height: 132px;
-        width: auto;
-   }
+    .clear-button svg {
+         height: 70px;
+         width: 70px;
+     }
 
 
   *, *:after, *:before {
