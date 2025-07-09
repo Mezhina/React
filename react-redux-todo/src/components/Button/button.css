@@ -1,0 +1,95 @@
+.input-container button img{
+    height: 54px;
+}
+
+
+.input-container button {
+    content: '';
+    min-width: 50px;
+    height: 50px;
+    background:  var(--button-add-color);
+    background-size: 50px 50px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size:  var(--font-size);
+    cursor: pointer;
+}
+.input-container button:hover {
+    background: var(--button-add-hover-color);
+}
+.send-button  {
+    background: var(--button-add-color);
+    float: right;
+    font-size:  var(--font-size);
+    padding: 5px 19px;
+    border: none;
+    margin: 14px 0 0 0;
+}
+.send-button:hover {
+    background: var(--button-add-hover-color);
+}
+
+.delete-button:hover,
+.delete-button svg:hover,
+.delete-button svg:active {
+    color: var(--button-delete-color);
+}
+
+.delete-button {
+    content: '';
+    min-width: 40px;
+    height: 40px;
+    color: white;
+    background: transparent;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size:  var(--font-size);
+
+}
+
+
+.filter-container button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.filter-container button {
+    margin: 6px 5px;
+    padding: 5px 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: var(--font-size);
+    background-color: var(--button-no-active-color);
+    cursor: pointer;
+}
+
+.filter-container .active-filter {
+    background-color: var(--button-active-color);
+    color: white;
+}
+
+
+.clear-button {
+    content: '';
+    min-width: 140px;
+    height: 140px;
+    background: var(--button-delete-color);
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 0 0 18px;
+}
+
+.clear-button svg {
+    height: 70px;
+    width: 70px;
+}
+
+

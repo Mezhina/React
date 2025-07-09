@@ -1,0 +1,34 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "text": "Learn TypeScript",
+      "completed": true
+    },
+    {
+      "id": "4571",
+      "text": "fdgdfg",
+      "completed": false
+    },
+    {
+      "id": "b761",
+      "text": "dfg",
+      "completed": true
+    },
+    {
+      "id": "9e5c",
+      "text": "fgdfg",
+      "completed": true
+    },
+    {
+      "id": "9247",
+      "text": "dffsf",
+      "completed": false
+    },
+    {
+      "id": "9e2a",
+      "text": "tyrty",
+      "completed": false
+    }
+  ]
+}
